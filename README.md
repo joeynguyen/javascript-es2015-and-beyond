@@ -9,3 +9,5 @@ Useful features from ECMAScript 2015 and beyond
 - [ES2019](2019/README.md)
 - [ES2020](2020/README.md)
 - [ES2021](2021/README.md)
+
+[Features I recommend against](js-nope/README.md)
