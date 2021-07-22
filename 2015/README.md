@@ -35,7 +35,22 @@ console.log(blockScoped);
 Difference between `const` and `let`
 
 ```js
-// add explanation
+// `let` can be reassigned to a different data type
+let a = 'a'
+a = 1;
+console.log(a); // 1
+
+// `const` cannot be reassigned to a different data type
+const b = 'b';
+b = 2;
+// Uncaught SyntaxError: Identifier 'b' has already been declared
+
+// however, despite the connotation of its name, `const` CAN be mutated
+const c = {
+    color: 'red',
+};
+c.number = 3;
+console.log(c); // { color: 'red', number: 3}
 ```
 
 ## Destructuring Assignment
