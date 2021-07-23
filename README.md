@@ -1,6 +1,6 @@
 # JavaScript ES2015 and Beyond
 
-Useful features from ECMAScript 2015 and beyond
+These lists don't include every feature introduced, just the ones I think are the most commonly useful.
 
 - [ES2015](2015/README.md)
 - [ES2016](2016/README.md)
@@ -9,5 +9,4 @@ Useful features from ECMAScript 2015 and beyond
 - [ES2019](2019/README.md)
 - [ES2020](2020/README.md)
 - [ES2021](2021/README.md)
-
-[Features I recommend against](js-nope/README.md)
+- [Features I recommend against](js-nope/README.md)

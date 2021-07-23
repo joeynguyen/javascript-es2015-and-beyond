@@ -5,13 +5,17 @@
 convert a list of key-value pairs into an object
 
 ```js
-const myArray = [['one', 1], ['two', 2], ['three', 3]];
+const myArray = [
+  ['one', 1],
+  ['two', 2],
+  ['three', 3]
+];
 const myObj = Object.fromEntries(myArray);
 
 console.log(myObj);    // => {one: 1, two: 2, three: 3}
 ```
 
-comes in handy is when working with the query string of a URL:
+comes in handy when working with the query string of a URL:
 
 ```js
 const paramsString = 'param1=foo&param2=baz';
@@ -31,7 +35,7 @@ const str = "   string   ";
 console.log(str.trimStart());    // => "string   "
 console.log(str.trimEnd());      // => "   string"
 
-// aliases for trimLeft and trimRight (which were implemented earlier) but new naming is consistent with `String.prototype.padStart` and `String.prototype.padEnd` and therefore is preferred over the previous names
+// aliases for trimLeft and trimRight (which were implemented earlier) but new naming is consistent with `String.prototype.padStart` and `String.prototype.padEnd` (ES2017 features) and therefore is preferred over the previous names
 String.prototype.trimLeft === String.prototype.trimStart; // => true
 String.prototype.trimRight === String.prototype.trimEnd; // => true
 ```
@@ -59,7 +63,7 @@ console.log(arr.flat(2));    // => [10, 20, 30]
 
 ## Optional catch binding
 
-Previously, when you wanted to use `try...catch` you had to pass in the exception as a parameter, even if you didn’t use it. Now if you don’t want to use the exception, you can use the catch block without a parameter.
+Previously, when you wanted to use `try...catch` you were required to pass in the exception as a parameter, even if you didn’t use it. Now if you don’t want to use the exception, you can use the catch block without a parameter.
 
 ```js
 // Before ES2019:

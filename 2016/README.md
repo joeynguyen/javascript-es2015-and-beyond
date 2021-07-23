@@ -17,8 +17,5 @@ fruits.includes(🍇, -1)  // true
 The exponential operator `**` is an infix operator for exponentiation.
 
 ```js
-x ** y
-// … produces the same result as …
-
-Math.pow(x,y);
+5 ** 4 === Math.pow(5,4); // true
 ```

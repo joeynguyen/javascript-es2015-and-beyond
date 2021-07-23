@@ -15,7 +15,7 @@ takes an object as an argument and returns an array of the object’s own enumer
 ```js
 const myObj = {one: 1, two: 2, three: 3};
 
-console.log(Object.entries(myObj));    
+console.log(Object.entries(myObj));
 // [["one", 1], ["two", 2], ["three", 3]]
 ```
 
@@ -44,7 +44,7 @@ async function getCurrencies() {
   const json = await data.json()
 
   // Log the JSON to console:
-  console.log(json)
+  console.log(json);
 }
 ```
 

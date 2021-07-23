@@ -21,7 +21,7 @@ Currently there is no way to replace all instances of a substring in a string wi
 ```js
 const fruits = '🍎+🍐+🍓+';
 const fruitsWithBanana = fruits.replace(/\+/g, '🍌');
-console.log(fruitsWithBanana); //🍎🍌🍐🍌🍓🍌
+console.log('fruitsWithBanana', fruitsWithBanana); //🍎🍌🍐🍌🍓🍌
 ```
 
 A new `replaceAll` method has been added to the String prototype.
@@ -29,7 +29,7 @@ A new `replaceAll` method has been added to the String prototype.
 ```js
 const fruits = '🍎+🍐+🍓+';
 const fruitsWithBanana = fruits.replaceAll('+', '🍌');
-console.log(fruitsWithBanana); //🍎🍌🍐🍌🍓🍌
+console.log('fruitsWithBanana', fruitsWithBanana); //🍎🍌🍐🍌🍓🍌
 ```
 
 ## Class private methods & private accessors
@@ -37,18 +37,24 @@ console.log(fruitsWithBanana); //🍎🍌🍐🍌🍓🍌
 We can restrict the method being called outside of the class by generating private methods.
 
 ```js
-class Person{
+class Person {
+  publicField = 11;
+  #privateField = 42;
 
- #showTypeMethod(){
-    console.log("This is a type");
- }
+  #somePrivateMethod(){
+     console.log("This is a type");
+     console.log("#privateField", this.#privateField);
+  }
 
- showHelloMethod(){
-    console.log("Hello World");
- }
+  somePublicMethod(){
+     console.log("Hello World");
+     console.log("publicField", this.publicField);
+  }
 }
 
 const person = new Person();
-person.showHelloMethod(); // Hello World
-person.showTypeMethod(); // Error: person.showTypeMethod is not a function
+console.log('publicField', person.publicField);
+console.log('privateField', person.#privateField); // SyntaxError
+person.somePublicMethod(); // Hello World
+person.somePrivateMethod(); // Error: person.somePrivateMethod is not a function
 ```

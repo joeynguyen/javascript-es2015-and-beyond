@@ -37,3 +37,58 @@ function createObject(name, myData) {
   return { name, data: myData };
 }
 ```
+
+## ES2021
+
+### Logical Assignment Operator
+
+The logical assignment operator combines the logical operations(&&, || or ??) with assignment.
+
+#### with `&&`
+
+```js
+var y = 2;
+x &&= y;
+console.log(x); // 2
+
+// can be replaced with
+x && (x = y);
+
+// or
+if (x) {
+  x = y;
+}
+```
+
+#### with `||`
+
+```js
+var x = 1;
+var y = 2;
+x ||= y;
+console.log(x); // 1
+
+// can be replaced with
+x || (x = y);
+
+// or
+x = x || y;
+```
+
+#### with `??`
+
+```js
+// as a reminder `??` is Nullish Coalescing operator. It checks if a value is null or undefined.
+var a;
+var b = a ?? 5;
+console.log(b); // 5
+
+// Logical Assignment Operator with `??`
+var x;
+var y = 2;
+x ??= y;
+console.log(x); // 2
+
+// equivalent to
+x = x ?? (x = y);
+```
