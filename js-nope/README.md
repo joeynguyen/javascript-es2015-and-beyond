@@ -47,6 +47,7 @@ The logical assignment operator combines the logical operations(&&, || or ??) wi
 #### with `&&`
 
 ```js
+var x = 1;
 var y = 2;
 x &&= y;
 console.log(x); // 2

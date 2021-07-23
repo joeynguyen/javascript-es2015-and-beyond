@@ -54,7 +54,7 @@ class Person {
 
 const person = new Person();
 console.log('publicField', person.publicField);
-console.log('privateField', person.#privateField); // SyntaxError
+console.log('privateField', person.#privateField); // SyntaxError: Private field '#privateField' must be declared in an enclosing class
 person.somePublicMethod(); // Hello World
-person.somePrivateMethod(); // Error: person.somePrivateMethod is not a function
+person.#somePrivateMethod(); // SyntaxError: Private field '#somePrivateMethod' must be declared in an enclosing class
 ```

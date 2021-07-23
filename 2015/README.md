@@ -58,16 +58,16 @@ makes it possible to unpack values from arrays, or properties from objects, into
 
 ```js
 const [a, b] = [30, 60];
-console.log('a', a); // 30
-console.log('b', b); // 60
+console.log(a); // 30
+console.log(b); // 60
 
 const myName = {
     first: "Terry",
     last: "Cruz"
 }
 const { first, last } = myName;
-console.log('first', first); // "Terry"
-console.log('last', last); // "Cruz"
+console.log(first); // "Terry"
+console.log(last); // "Cruz"
 ```
 
 ## Template Literals/Strings
@@ -171,7 +171,7 @@ fetch('https://jsonplaceholder.typicode.com/aslfdjk')
   .catch(err => console.log('are you sure you have the right URL?'))
 ```
 
-### Classes
+## Classes
 
 ```js
 class Person{

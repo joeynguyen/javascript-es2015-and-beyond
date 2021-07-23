@@ -19,7 +19,7 @@ console.log(Object.entries(myObj));
 // [["one", 1], ["two", 2], ["three", 3]]
 ```
 
-## String.prototype.padStart and String.prototype.padEnd
+## `String.prototype.padStart` and `String.prototype.padEnd`
 
 ```js
 // Add characters at the beginning until the string reaches length of n characters.
